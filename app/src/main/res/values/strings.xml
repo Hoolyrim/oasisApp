@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">veganing</string>
+    <string name="test">성향테스트</string>
+    <string name="question1">\n 당신은 채소 섭취를 \n하신 적이 있습니까? \n</string>
+    <string name="question2">\n 당신은 우유, 요거트, 치즈 등의 유제품을 섭취 하신 적이 \n 있습니까?\n</string>
+    <string name="question3">\n 당신은 달걀을 섭취 하신 \n 적이 있습니까?\n</string>
+    <string name="question4">\n 당신은 생선, 조개, 새우 등 \n어패류를 섭취하신 적이 \n있습니까?\n</string>
+    <string name="question5">\n 당신은 닭, 오리 등 품종 \n개량을 하여 육성한 조류를 \n 섭취하신 적이 있습니까?</string>
+    <string name="question6">\n 당신은 육류를 \n 섭취하신 적이 있습니까?\n</string>
+    <string name="annouce">** 최근 한달을 기준으로 테스트를 진행 해주십시오.</string>
+    <string name="annouce2">** 최근 한달을 기준으로 한 성향 테스트 결과입니다.</string>
+    <string name="answer1">\n 당신의 채식 단계는 \n &quot;비건&quot; 입니다.\n</string>
+    <string name="answer1_1">\n 모든 종류의 동물성 \n음식을 섭취하지 않음\n</string>
+    <string name="answer2">\n 당신의 채식 단계는 \n &quot;락토&quot; 입니다.\n</string>
+    <string name="answer2_1">\n 유제품 섭취 \n</string>
+    <string name="answer3">\n 당신의 채식 단계는 \n &quot;오보&quot; 입니다.\n</string>
+    <string name="answer3_1">\n\n 동물의 알 섭취 \n</string>
+    <string name="answer4">\n 당신의 채식 단계는 \n &quot;락토-오보&quot; 입니다.\n</string>
+    <string name="answer4_1">\n\n 동물의 알과 유제품 섭취 \n</string>
+    <string name="answer5">\n 당신의 채식 단계는 \n &quot;페스코&quot; 입니다.\n</string>
+    <string name="answer5_1">\n 해산물과 동물의 알, \n우유만 섭취 \n</string>
+    <string name="answer6">\n 당신의 채식 단계는 \n &quot;폴로&quot; 입니다.\n</string>
+    <string name="answer6_1">\n 붉은 육고기(소, 돼지)를 \n 섭취하지 않음 \n</string>
+    <string name="answer7">\n 당신의 채식 단계는 \n &quot;플랙시테리언&quot; 입니다.\n</string>
+    <string name="answer7_1">\n 채식을 위주로 하되 상황에 \n 맞게 육식도 섭취 \n</string>
+
+
+
+    <string name="restart">다시하기</string>
+    <string name="end">종료하기</string>
+</resources>
