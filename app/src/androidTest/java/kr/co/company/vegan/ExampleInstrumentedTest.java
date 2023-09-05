@@ -1,7 +1,10 @@
 package kr.co.company.vegan;
 
 import android.content.Context;
+import android.util.Log;
 
+import androidx.camera.camera2.Camera2Config;
+import androidx.camera.core.CameraXConfig;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -9,6 +12,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
+
+import android.app.Application;
+import android.util.Log;
+import androidx.camera.camera2.Camera2Config;
+import androidx.camera.core.CameraXConfig;
+
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -24,3 +33,5 @@ public class ExampleInstrumentedTest {
         assertEquals("kr.co.company.vegan", appContext.getPackageName());
     }
 }
+
+
