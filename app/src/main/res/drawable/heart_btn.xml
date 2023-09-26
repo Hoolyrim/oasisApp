@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--버튼 클릭시 이미지-->
+    <item android:drawable="@drawable/heartbackbtn" android:state_selected="true"/>
+<!--    기본 이미지-->
+    <item android:drawable="@drawable/heart" android:state_selected="false"/>
+</selector>

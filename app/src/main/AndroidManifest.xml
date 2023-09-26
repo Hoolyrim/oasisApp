@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 인터넷 권한 선언 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -32,17 +35,38 @@
             </intent-filter>
         </activity>
 
+        <!-- kakao 로그인 화면으로 이동하기 위한 kakao.sdk에 존재하는 AuthCodeHandler를 추가-->
+<!--        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW"/>-->
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--                <category android:name="android.intent.category.BROWSABLE"/>-->
+
+<!--                <data android:host="oauth"-->
+<!--                    android:scheme="kakao{d1389f930f4c488f8df3754502736280}"/>-->
+<!--            </intent-filter>-->
+
+<!--        </activity>-->
+
         <activity
-            android:name=".smartLens"
+            android:name=".TextRecognitionActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
 
 <!--        <activity android:name=".smartLens"/>-->
+<!--        <activity android:name=".MainActivity"/>-->
         <activity android:name=".challenge"/>
         <activity android:name=".community"/>
         <activity android:name=".DetailActivity"/>
         <activity android:name=".ListActivity"/>
+        <activity android:name=".BoardRegisterActivity"/>
+        <activity android:name=".ResultActivity"/>
         <activity android:name=".RegisterActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".RecommendActivity"/>
+
+
     </application>
 
 </manifest>

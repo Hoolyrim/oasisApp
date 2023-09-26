@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "391852477377",
+    "project_id": "veganing-64bff",
+    "storage_bucket": "veganing-64bff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391852477377:android:4f522b28fba9a26d903d40",
+        "android_client_info": {
+          "package_name": "kr.co.company.vegan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391852477377-knrnrhp8jqq5hahorp750icapf7ppu1q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6KUm78P3vLtV2Wy03hEEa702ggEVxv4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391852477377-knrnrhp8jqq5hahorp750icapf7ppu1q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

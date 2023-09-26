@@ -79,7 +79,7 @@ public class ListActivity extends AppCompatActivity{
             public void onClick(View view) {
 
                 // userid 를 가지고 RegisterActivity 로 이동
-                Intent intent = new Intent(ListActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(ListActivity.this, BoardRegisterActivity.class);
                 intent.putExtra("userid", userid);
                 startActivity(intent);
             }

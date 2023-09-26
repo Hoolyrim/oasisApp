@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextRecognitionActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="97dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/bg_green"
+                    android:minHeight="?attr/actionBarSize"
+                    app:navigationIcon="?attr/homeAsUpIndicator"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginBottom="6dp"
+                android:text="스마트렌즈"
+                android:textColor="#171616"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView7"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="32dp"-->
+<!--                    android:text="이미지 속 텍스트 인식"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                <ImageView-->
+<!--                    android:id="@+id/imageView2"-->
+<!--                    android:layout_width="269dp"-->
+<!--                    android:layout_height="262dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:Background="#00FF0000"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.497"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:srcCompat="@drawable/o"-->
+<!--                    tools:src="@tools:sample/avatars" />-->
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/banner5"
+                    tools:src="@tools:sample/avatars" />
+
+                <Button
+                    android:id="@+id/btn_get_image"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/radius"
+                    android:backgroundTint="#C9DAC1"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="이미지 가져오기"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_detection_image"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/btn_detection_image"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_detection_image"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="12dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@color/bg_green"-->
+<!--                    android:text="텍스트 인식"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.501"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/btn_get_image" />-->
+                <Button
+                    android:id="@+id/btn_result"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/radius"
+                    android:backgroundTint="#C9DAC1"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="판독 결과 보러가기"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_get_image"
+                    />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="인식한 텍스트: "-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView7" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text_info"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text=""-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_YN"
+                    android:layout_width="350dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="228dp"
+                    android:background="@drawable/btn_radius_big"
+                    android:text='이 제품은 비건 제품입니다.'
+                    android:textSize="20dp"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/btn_allergy"
+                    android:layout_width="350dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="228dp"
+                    android:textSize="20dp"
+                    android:text="알레르기 정보 | 대두 함유"
+                    android:background="@drawable/btn_radius_big"
+                    android:visibility="invisible"/>
+
+                <!--                <ListView-->
+<!--                    android:id="@+id/list_item"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:visibility="invisible"/>-->
+
+                <Button
+                    android:id="@+id/MList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="성분 목록 ▼"
+                    android:textSize="20dp"
+                    android:background="#00ff0000"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/list"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="35dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="성분 목록 ▼ "-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="23dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:visibility="visible" />-->
+
+                <TextView
+                    android:id="@+id/m1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:text="원액두유"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:id="@+id/m2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:text="대두 고형분"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:id="@+id/m3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:text="식염"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+                <Button
+                    android:id="@+id/btn_recom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="추천 제품 보기"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:background="@color/bg_green"
+                    android:visibility="invisible"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

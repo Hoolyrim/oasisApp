@@ -31,8 +31,8 @@
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar2"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginBottom="0dp"
                     android:background="@color/white"
                     android:minHeight="?attr/actionBarSize"
@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="-40dp"
+                    android:layout_marginTop="-45dp"
                     android:layout_marginBottom="6dp"
                     android:text="VEGANING"
                     android:textColor="#171616"
@@ -57,19 +57,44 @@
                     app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btn_my"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="350dp"
+                    android:layout_marginTop="-50dp"
+                    android:background="#00FF0000"
+                    android:contentDescription="mypageicon"
+                    android:src="@drawable/myicon" />
+
+                <!--                <Button-->
+<!--                    android:id="@+id/btn_log"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="-50dp"-->
+<!--                    android:layout_marginStart="320dp"-->
+<!--                    android:text="로그인" />-->
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/viewPager2"
-                    android:layout_width="0dp"
-                    android:layout_height="200dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    app:srcCompat="@drawable/banner4" />
+
+<!--                <androidx.viewpager2.widget.ViewPager2-->
+<!--                    android:id="@+id/viewPager"-->
+<!--                    android:layout_width="405dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
 
                 <!--                <TextView-->
                 <!--                    android:id="@+id/tv_page_number"-->
@@ -98,20 +123,20 @@
                 <!--                    app:layout_constraintEnd_toStartOf="@+id/tv_see_all"-->
                 <!--                    app:layout_constraintTop_toTopOf="@+id/tv_see_all" />-->
 
-                <TextView
-                    android:id="@+id/tv_see_all"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:alpha="0.7"
-                    android:paddingStart="340dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="4dp"
-                    android:paddingBottom="4dp"
-                    android:background="@drawable/white_rectangle_left_radius"
-                    android:text="모두 보기>"
-                    app:layout_constraintBottom_toBottomOf="@+id/viewPager2"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                <!--                <TextView-->
+                <!--                    android:id="@+id/tv_see_all"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginBottom="10dp"-->
+                <!--                    android:alpha="0.7"-->
+                <!--                    android:paddingStart="340dp"-->
+                <!--                    android:paddingTop="4dp"-->
+                <!--                    android:paddingEnd="4dp"-->
+                <!--                    android:paddingBottom="4dp"-->
+                <!--                    android:background="@drawable/white_rectangle_left_radius"-->
+                <!--                    android:text="모두 보기>"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@+id/viewPager2"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent" />-->
 
             </LinearLayout>
 
@@ -123,6 +148,7 @@
                     android:id="@+id/btn_camera"
                     android:layout_width="137dp"
                     android:layout_height="137dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginStart="46dp"
                     android:layout_marginEnd="228dp"
                     android:background="@drawable/radius"
@@ -139,9 +165,10 @@
                     android:id="@+id/btn_recipe"
                     android:layout_width="0137dp"
                     android:layout_height="0137dp"
-                    android:background="@drawable/radius"
                     android:layout_marginStart="-200dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="228dp"
+                    android:background="@drawable/radius"
                     android:backgroundTint="#C9DAC1"
                     android:contentDescription="btn_recipe"
                     android:padding="30dp"
