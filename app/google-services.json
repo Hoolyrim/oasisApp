@@ -1,36 +1,27 @@
 {
   "project_info": {
-    "project_number": "391852477377",
-    "project_id": "veganing-64bff",
-    "storage_bucket": "veganing-64bff.appspot.com"
+    "project_number": "556672997771",
+    "firebase_url": "https://veganing-b5bbc-default-rtdb.firebaseio.com",
+    "project_id": "veganing-b5bbc",
+    "storage_bucket": "veganing-b5bbc.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:391852477377:android:4f522b28fba9a26d903d40",
+        "mobilesdk_app_id": "1:556672997771:android:ac00ffcd4e1ca2f180f78e",
         "android_client_info": {
           "package_name": "kr.co.company.vegan"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "391852477377-knrnrhp8jqq5hahorp750icapf7ppu1q.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB6KUm78P3vLtV2Wy03hEEa702ggEVxv4E"
+          "current_key": "AIzaSyARjidSBQk-62JPO97jdLBtOHIlVKHFgvA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "391852477377-knrnrhp8jqq5hahorp750icapf7ppu1q.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
