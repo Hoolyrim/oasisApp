@@ -1,12 +1,10 @@
 package kr.co.company.vegan;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -27,8 +25,8 @@ public class MyPageActivity extends AppCompatActivity {
                 //로그아웃 하기
                 mFirebaseAuth.signOut();
 
-                Intent intent = new Intent(MyPageActivity.this, LoginActivity.class);
-                startActivity( intent );
+//                Intent intent = new Intent(MyPageActivity.this, LoginActivity.class);
+//                startActivity( intent );
                 finish();
             }
         } );

@@ -1,8 +1,8 @@
 package kr.co.company.vegan;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LikeActivity extends AppCompatActivity {
 

@@ -65,10 +65,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
                     android:background="@color/bg_green"
-                    android:textColor="@color/black"
-                    android:text="제목"/>
+                    android:padding="16dp"
+                    android:text="제목"
+                    android:textSize="16dp"
+                    android:textColor="@color/black" />
 
                 <EditText
                     android:id="@+id/title_et"
@@ -92,32 +93,46 @@
             <EditText
                 android:id="@+id/content_et"
                 android:layout_width="match_parent"
-                android:layout_height="597dp"
+                android:layout_height="400dp"
                 android:layout_weight="1"
                 android:background="#eeeeee"
                 android:hint="내용을 입력하세요."
                 android:padding="16dp" />
 
-            <RadioGroup
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/image_select_button"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:text="공개"/>
+                android:layout_marginStart="5dp"
+                android:text="이미지 선택"
+                android:textColor="@color/black"
+                android:background="@color/bg_green"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:text="비공개"/>
-            </RadioGroup>
+            <ImageView
+                android:id="@+id/selected_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="46dp" />
+
+<!--            <RadioGroup-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center">-->
+<!--                <RadioButton-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="15dp"-->
+<!--                    android:text="공개"/>-->
+
+<!--                <RadioButton-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="15dp"-->
+<!--                    android:text="비공개"/>-->
+<!--            </RadioGroup>-->
 
             <Button
                 android:id="@+id/reg_button"

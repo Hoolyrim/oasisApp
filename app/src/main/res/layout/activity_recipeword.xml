@@ -91,7 +91,7 @@
                 android:text="내용" />
 
             <EditText
-                android:id="@+id/content_et"
+                android:id="@+id/editTextMessage"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:layout_weight="1"
@@ -100,18 +100,22 @@
                 android:padding="16dp" />
 
             <Button
-                android:id="@+id/image_select_button"
+                android:id="@+id/buttonChooseImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
                 android:text="이미지 선택"
                 android:textColor="@color/black"
-                android:background="@color/bg_green"/>
+                android:background="@color/bg_green"
+                android:layout_below="@id/editTextMessage"/>
 
             <ImageView
-                android:id="@+id/selected_image_view"
-                android:layout_width="match_parent"
-                android:layout_height="46dp" />
+                android:id="@+id/imageViewSelectedImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
 
             <!--            <RadioGroup-->
             <!--                android:layout_width="match_parent"-->
@@ -135,9 +139,10 @@
             <!--            </RadioGroup>-->
 
             <Button
-                android:id="@+id/reg_button"
+                android:id="@+id/buttonSend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="등록하기"
                 android:textColor="@color/black"
                 android:background="@color/bg_green"/>

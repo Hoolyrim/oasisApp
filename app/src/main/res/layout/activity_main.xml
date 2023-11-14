@@ -47,10 +47,12 @@
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="140dp"
                     android:layout_marginTop="-45dp"
                     android:layout_marginBottom="6dp"
+                    android:gravity="center"
                     android:text="VEGANING"
+                    android:textAlignment="center"
                     android:textColor="#171616"
                     android:textSize="25dp"
                     android:textStyle="bold"
@@ -68,82 +70,83 @@
                     android:contentDescription="mypageicon"
                     android:src="@drawable/myicon" />
 
-                <!--                <Button-->
+<!--                                <Button-->
 <!--                    android:id="@+id/btn_log"-->
 <!--                    android:layout_width="wrap_content"-->
 <!--                    android:layout_height="wrap_content"-->
 <!--                    android:layout_marginTop="-50dp"-->
 <!--                    android:layout_marginStart="320dp"-->
-<!--                    android:text="로그인" />-->
+<!--                    android:text="성향테스트" />-->
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="250dp"
-                    app:srcCompat="@drawable/banner4" />
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="250dp"-->
+<!--                    app:srcCompat="@drawable/banner4" />-->
 
-<!--                <androidx.viewpager2.widget.ViewPager2-->
-<!--                    android:id="@+id/viewPager"-->
-<!--                    android:layout_width="405dp"-->
-<!--                    android:layout_height="200dp"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+<!--&lt;!&ndash;                <androidx.viewpager2.widget.ViewPager2&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/viewPager"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="405dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="200dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
 
-                <!--                <TextView-->
-                <!--                    android:id="@+id/tv_page_number"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginEnd="2dp"-->
-                <!--                    android:text="1"-->
-                <!--                    android:textColor="#fff"-->
-                <!--                    app:layout_constraintBottom_toBottomOf="@+id/textView"-->
-                <!--                    app:layout_constraintEnd_toStartOf="@+id/textView"-->
-                <!--                    app:layout_constraintTop_toTopOf="@+id/textView" />-->
+<!--                &lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:id="@+id/tv_page_number"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginEnd="2dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:text="1"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:textColor="#fff"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="@+id/textView"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintEnd_toStartOf="@+id/textView"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintTop_toTopOf="@+id/textView" />&ndash;&gt;-->
 
 
-                <!--                <TextView-->
-                <!--                    android:id="@+id/textView"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginEnd="2dp"-->
-                <!--                    android:paddingStart="320dp"-->
-                <!--                    android:paddingTop="4dp"-->
-                <!--                    android:paddingEnd="4dp"-->
-                <!--                    android:paddingBottom="4dp"-->
-                <!--                    android:text="/5"-->
-                <!--                    android:textColor="#fff"-->
-                <!--                    app:layout_constraintBottom_toBottomOf="@+id/tv_see_all"-->
-                <!--                    app:layout_constraintEnd_toStartOf="@+id/tv_see_all"-->
-                <!--                    app:layout_constraintTop_toTopOf="@+id/tv_see_all" />-->
+<!--                &lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:id="@+id/textView"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginEnd="2dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:paddingStart="320dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:paddingTop="4dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:paddingEnd="4dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:paddingBottom="4dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:text="/5"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:textColor="#fff"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="@+id/tv_see_all"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintEnd_toStartOf="@+id/tv_see_all"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintTop_toTopOf="@+id/tv_see_all" />&ndash;&gt;-->
 
-                <!--                <TextView-->
-                <!--                    android:id="@+id/tv_see_all"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginBottom="10dp"-->
-                <!--                    android:alpha="0.7"-->
-                <!--                    android:paddingStart="340dp"-->
-                <!--                    android:paddingTop="4dp"-->
-                <!--                    android:paddingEnd="4dp"-->
-                <!--                    android:paddingBottom="4dp"-->
-                <!--                    android:background="@drawable/white_rectangle_left_radius"-->
-                <!--                    android:text="모두 보기>"-->
-                <!--                    app:layout_constraintBottom_toBottomOf="@+id/viewPager2"-->
-                <!--                    app:layout_constraintEnd_toEndOf="parent" />-->
+<!--                &lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:id="@+id/tv_see_all"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginBottom="10dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:alpha="0.7"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:paddingStart="340dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:paddingTop="4dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:paddingEnd="4dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:paddingBottom="4dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:background="@drawable/white_rectangle_left_radius"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:text="모두 보기>"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="@+id/viewPager2"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent" />&ndash;&gt;-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp">
                 <ImageButton
                     android:id="@+id/btn_camera"
                     android:layout_width="137dp"
@@ -228,7 +231,7 @@
                     android:id="@+id/btn_green"
                     android:layout_width="137dp"
                     android:layout_height="137dp"
-                    android:layout_marginTop="0dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginStart="46dp"
                     android:layout_marginEnd="228dp"
                     android:background="@drawable/radius"
@@ -251,7 +254,7 @@
                     android:id="@+id/btn_search"
                     android:layout_width="137dp"
                     android:layout_height="137dp"
-                    android:layout_marginTop="0dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginStart="-200dp"
                     android:layout_marginEnd="228dp"
                     android:background="@drawable/radius"
@@ -318,7 +321,7 @@
                     android:layout_width="137dp"
                     android:layout_height="137dp"
                     android:layout_marginStart="46dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="228dp"
                     android:background="@drawable/radius"
                     android:backgroundTint="#C9DAC1"
@@ -335,7 +338,7 @@
                     android:layout_width="137dp"
                     android:layout_height="137dp"
                     android:layout_marginStart="-200dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="228dp"
                     android:background="@drawable/radius"
                     android:backgroundTint="#C9DAC1"

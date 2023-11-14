@@ -16,4 +16,10 @@
     <external-files-path
         name="external-files"
         path="."/> <!--  Context.getExternalFilesDir() 외부 저장소-->
+
+
+    <external-files-path
+        name="my_images"
+        path="Pictures" />
+
 </paths>

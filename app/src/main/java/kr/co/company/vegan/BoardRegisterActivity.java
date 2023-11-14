@@ -1,35 +1,42 @@
 package kr.co.company.vegan;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.io.File;
 
-import javax.net.ssl.HttpsURLConnection;
+public class BoardRegisterActivity extends AppCompatActivity {
 
-public class BoardRegisterActivity extends AppCompatActivity{
     // 로그에 사용할 TAG 변수 선언
     final private String TAG = getClass().getSimpleName();
 
     // 사용할 컴포넌트 선언
     EditText title_et, content_et;
     Button reg_button;
+    ImageView selectedImageView;
 
     // 유저아이디 변수
     String userid = "";
+    File selectedImageFile;
+
+    // 이미지 선택을 위한 요청 코드 상수 정의
+    private static final int IMAGE_PICK_CODE = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,103 +50,90 @@ public class BoardRegisterActivity extends AppCompatActivity{
         title_et = findViewById(R.id.title_et);
         content_et = findViewById(R.id.content_et);
         reg_button = findViewById(R.id.reg_button);
+        selectedImageView = findViewById(R.id.selected_image_view);
 
-        // 버튼 이벤트 추가
-        reg_button.setOnClickListener(new View.OnClickListener() {
+        // 이미지 선택 버튼 이벤트 추가
+        Button imageSelectButton = findViewById(R.id.image_select_button);
+        imageSelectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 게시물 등록 함수
-                RegBoard regBoard = new RegBoard();
-                regBoard.execute(userid, title_et.getText().toString(), content_et.getText().toString());
+                Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
+                galleryIntent.setType("image/*");
+                startActivityForResult(galleryIntent, IMAGE_PICK_CODE);
             }
         });
 
+        // 등록 버튼 이벤트 추가
+        reg_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String title = title_et.getText().toString();
+                String content = content_et.getText().toString();
+                String imageFileName = "image_file_name.jpg";
+
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("posts");
+                String postId = databaseReference.push().getKey();
+
+                StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("images/" + imageFileName);
+
+                storageReference.putFile(Uri.fromFile(selectedImageFile)).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // 이미지 업로드 성공
+
+                        // 다운로드 URL을 가져오는 방법
+                        storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri downloadUrl) {
+                                // 다운로드 URL을 사용하여 필요한 작업을 수행
+                                String imageUrl = downloadUrl.toString();
+
+                                // 글 데이터 업로드
+                                Post post = new Post(title, content, imageUrl);
+                                databaseReference.child(postId).setValue(post);
+
+                                Toast.makeText(BoardRegisterActivity.this, "게시물이 등록되었습니다.", Toast.LENGTH_SHORT).show();
+                                finish();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(BoardRegisterActivity.this, "다운로드 URL 가져오기 실패: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(BoardRegisterActivity.this, "이미지 업로드 실패: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
     }
 
-    class RegBoard extends AsyncTask<String, Void, String> {
+    // onActivityResult 메서드
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            Log.d(TAG, "onPreExecute");
+        // 이미지 선택 결과를 처리하는 코드를 추가
+        if (requestCode == IMAGE_PICK_CODE && resultCode == RESULT_OK && data != null) {
+            Uri imageUri = data.getData();
+            selectedImageView.setImageURI(imageUri);
+            selectedImageFile = uriToFile(imageUri);
         }
+    }
 
+    private File uriToFile(Uri uri) {
+        String[] projection = {MediaStore.Images.Media.DATA};
+        Cursor cursor = getContentResolver().query(uri, projection, null, null, null);
+        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        cursor.moveToFirst();
+        String filePath = cursor.getString(column_index);
+        cursor.close();
 
-        @Override
-        protected void onPostExecute(String result) {
-            super.onPostExecute(result);
-            Log.d(TAG, "onPostExecute, " + result);
-
-            if(result.equals("success")){
-                // 결과값이 success 이면
-                // 토스트 메시지를 뿌리고
-                // 이전 액티비티(ListActivity)로 이동,
-                // 이때 ListActivity 의 onResume() 함수 가 호출되며, 데이터를 새로 고침
-                Toast.makeText(BoardRegisterActivity.this, "등록되었습니다.", Toast.LENGTH_SHORT).show();
-                finish();
-            }else
-            {
-                Toast.makeText(BoardRegisterActivity.this, result, Toast.LENGTH_SHORT).show();
-            }
-
-        }
-
-
-        @Override
-        protected String doInBackground(String... params) {
-
-            String userid = params[0];
-            String title = params[1];
-            String content = params[2];
-
-            String server_url = "http://15.164.252.136/reg_board.php";
-
-
-            URL url;
-            String response = "";
-            try {
-                url = new URL(server_url);
-
-                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                conn.setReadTimeout(15000);
-                conn.setConnectTimeout(15000);
-                conn.setRequestMethod("POST");
-                conn.setDoInput(true);
-                conn.setDoOutput(true);
-                Uri.Builder builder = new Uri.Builder()
-                        .appendQueryParameter("userid", userid)
-                        .appendQueryParameter("title", title)
-                        .appendQueryParameter("content", content);
-                String query = builder.build().getEncodedQuery();
-
-                OutputStream os = conn.getOutputStream();
-                BufferedWriter writer = new BufferedWriter(
-                        new OutputStreamWriter(os, "UTF-8"));
-                writer.write(query);
-                writer.flush();
-                writer.close();
-                os.close();
-
-                conn.connect();
-                int responseCode=conn.getResponseCode();
-
-                if (responseCode == HttpsURLConnection.HTTP_OK) {
-                    String line;
-                    BufferedReader br=new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                    while ((line=br.readLine()) != null) {
-                        response+=line;
-                    }
-                }
-                else {
-                    response="";
-
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            return response;
-        }
+        return new File(filePath);
     }
 }
+

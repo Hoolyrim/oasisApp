@@ -112,6 +112,23 @@
                     tools:src="@tools:sample/avatars" />
 
                 <Button
+                    android:id="@+id/cameraButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/radius"
+                    android:backgroundTint="#C9DAC1"
+                    android:onClick="capturePhoto"
+                    android:text="이미지 찍기"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_detection_image"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/btn_detection_image"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <Button
                     android:id="@+id/btn_get_image"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
@@ -169,14 +186,15 @@
 <!--                    app:layout_constraintStart_toStartOf="parent"-->
 <!--                    app:layout_constraintTop_toBottomOf="@+id/textView7" />-->
 
-<!--                <TextView-->
-<!--                    android:id="@+id/text_info"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:text=""-->
-<!--                    android:textSize="20sp"-->
-<!--                    android:textStyle="bold" />-->
+                <TextView
+                    android:id="@+id/text_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -226,6 +244,18 @@
                     android:textColor="@color/black"
                     android:visibility="invisible"/>
 
+                <LinearLayout
+                    android:id="@+id/ingredientsLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/text_info"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="invisible"
+                    android:layout_marginStart="35dp">
+                    <!-- 성분들이 추가될 곳 -->
+                </LinearLayout>
+
 <!--                <TextView-->
 <!--                    android:id="@+id/list"-->
 <!--                    android:layout_width="wrap_content"-->
@@ -238,33 +268,33 @@
 <!--                    android:textStyle="bold"-->
 <!--                    android:visibility="visible" />-->
 
-                <TextView
-                    android:id="@+id/m1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp"
-                    android:text="원액두유"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    android:visibility="invisible"/>
-                <TextView
-                    android:id="@+id/m2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp"
-                    android:text="대두 고형분"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    android:visibility="invisible"/>
-                <TextView
-                    android:id="@+id/m3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp"
-                    android:text="식염"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    android:visibility="invisible"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/m1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="35dp"-->
+<!--                    android:text="원액두유"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:visibility="invisible"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/m2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="35dp"-->
+<!--                    android:text="대두 고형분"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:visibility="invisible"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/m3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="35dp"-->
+<!--                    android:text="식염"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:visibility="invisible"/>-->
                 <Button
                     android:id="@+id/btn_recom"
                     android:layout_width="match_parent"

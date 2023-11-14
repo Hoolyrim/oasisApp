@@ -30,21 +30,31 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
 
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.google.android.gms:play-services-tasks:18.0.2")
-    implementation("com.google.mlkit:vision-common:17.3.0")
-    implementation("com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0")
-    implementation("com.google.firebase:firebase-auth:22.1.2")
-    implementation("com.google.firebase:firebase-database:20.2.2")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+    implementation ("com.google.android.material:material:1.5.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation ("com.google.firebase:firebase-auth:21.1.0")
+    implementation ("com.google.firebase:firebase-messaging:15.0.2")
+    implementation ("com.google.firebase:firebase-database:20.1.0")
+    implementation ("com.google.firebase:firebase-storage:20.3.0")
+    implementation ("com.google.firebase:firebase-firestore:24.9.1")
+    testImplementation ("junit:junit:4.13.2")
+    androidTestImplementation ("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
+
+    implementation (platform("com.google.firebase:firebase-bom:32.2.3"))
+
+//    implementation ("com.kakao.sdk:v2-user:2.8.6") //카카오 로그인
+//    implementation 'com.nhn.android.naverlogin:naverlogin:4.1.4'
+//    implementation "com.naver.nid:naveridlogin-android-sdk:4.2.6" //네이버 로그인
+//    implementation 'com.naver:naversdk:2.1.0'
 
     implementation("androidx.viewpager2:viewpager2:1.0.0") /*viewpager2를 사용하기 위한*/
     // Glide
@@ -66,5 +76,5 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
     implementation("com.google.firebase:firebase-analytics-ktx")
 
-//    implementation ("com.kakao.sdk:v2-user:2.8.6") //카카오 로그인
+    implementation("com.squareup.picasso:picasso:2.71828")
 }

@@ -26,11 +26,11 @@
         android:theme="@style/Theme.Vegan"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -54,18 +54,44 @@
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
 
-<!--        <activity android:name=".smartLens"/>-->
-<!--        <activity android:name=".MainActivity"/>-->
+<!--        <activity android:name=".RecognitionActivity_test"/>-->
         <activity android:name=".challenge"/>
-        <activity android:name=".community"/>
         <activity android:name=".DetailActivity"/>
         <activity android:name=".ListActivity"/>
         <activity android:name=".BoardRegisterActivity"/>
-        <activity android:name=".ResultActivity"/>
         <activity android:name=".RegisterActivity"/>
-        <activity android:name=".LoginActivity"/>
+<!--        <activity android:name=".LoginActivity"/>-->
         <activity android:name=".RecommendActivity"/>
+<!--        <activity android:name=".MyPageActivity"/>-->
+        <activity android:name=".FindActivity"/>
+        <activity android:name=".ListviewAdd"/>
+        <activity android:name=".LikeActivity"/>
+        <activity android:name=".AllergyActivity"/>
+        <activity android:name=".smartLens"/>
+        <activity android:name=".CameraActivity"/>
+        <activity android:name=".RecipeRegisterActivity"/>
+        <activity android:name=".SearchActivity"/>
+        <activity android:name=".TestActivity"/>
+        <activity android:name=".answer1"/>
+        <activity android:name=".answer2"/>
+        <activity android:name=".answer3"/>
+        <activity android:name=".answer4"/>
+        <activity android:name=".answer5"/>
+        <activity android:name=".answer6"/>
+        <activity android:name=".answer7"/>
+        <activity android:name=".MainActivity"/>
 
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
     </application>
 
