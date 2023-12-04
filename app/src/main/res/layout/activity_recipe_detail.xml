@@ -27,26 +27,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="0dp"
-                    android:background="@color/white"
+                    android:background="#F1F1E8"
                     android:minHeight="?attr/actionBarSize"
                     android:theme="?attr/actionBarTheme"
                     app:layout_constraintBottom_toTopOf="@+id/scrollView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:navigationIcon="@drawable/baseline_keyboard_backspace_24" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="96dp"
-                    android:layout_height="32dp"
-                    android:layout_marginStart="-360dp"
-                    android:layout_marginTop="18dp"
-                    android:text="커뮤니티"
+                    android:id="@+id/textView37"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:text="비건 레시피"
                     android:textColor="@color/black"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,13 +89,13 @@
 
                 <TextView
                     android:id="@+id/date_tv"
-                    android:padding="16dp"
-                    android:background="#eeeeee"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="#eeeeee"
+                    android:padding="16dp"
                     android:text="제목입니다."
-                    android:textColor="#6E6E6E"/>
+                    android:textColor="#6E6E6E" />
             </LinearLayout>
 
             <TextView

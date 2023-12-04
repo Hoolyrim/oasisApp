@@ -1,0 +1,46 @@
+<!-- recipe_list_item.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- 숫자를 표시할 TextView -->
+    <TextView
+        android:id="@+id/itemNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingTop="15dp"
+        android:paddingRight="5dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- 레시피 제목 -->
+    <TextView
+        android:id="@+id/recipeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="15dp"
+        android:textSize="16sp"
+        android:background="#eeeeee"
+        android:paddingStart="10dp"
+        android:textColor="@android:color/black" />
+
+<!--    &lt;!&ndash; 레시피 이미지 &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/recipeImage"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:scaleType="centerCrop" />-->
+
+<!--    &lt;!&ndash; 레시피 설명 &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/recipeDescription"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingTop="4dp"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textColor="@android:color/darker_gray" />-->
+</LinearLayout>

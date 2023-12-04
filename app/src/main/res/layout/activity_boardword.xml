@@ -34,25 +34,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="0dp"
-                    android:background="@color/white"
+                    android:background="#F1F1E8"
                     android:minHeight="?attr/actionBarSize"
                     android:theme="?attr/actionBarTheme"
                     app:layout_constraintBottom_toTopOf="@+id/scrollView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:navigationIcon="@drawable/baseline_keyboard_backspace_24" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="156dp"
                     android:layout_height="32dp"
-                    android:layout_marginStart="-360dp"
+                    android:layout_marginStart="-380dp"
                     android:layout_marginTop="18dp"
-                    android:text="나의 그린 기록 남기기"
+                    android:text="레시피"
                     android:textColor="@color/black"
                     android:textStyle="bold"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -65,7 +65,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/bg_green"
+                    android:background="#Fff"
                     android:padding="16dp"
                     android:text="제목"
                     android:textSize="16dp"
@@ -78,20 +78,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="제목을 입력하세요."
-                    />
+                    android:hint="제목을 입력하세요." />
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:background="@color/bg_green"
+                android:padding="16sp"
+                android:background="#Fff"
                 android:textColor="@color/black"
                 android:text="내용" />
 
             <EditText
-                android:id="@+id/content_et"
+                android:id="@+id/editTextMessage"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:layout_weight="1"
@@ -100,47 +99,54 @@
                 android:padding="16dp" />
 
             <Button
-                android:id="@+id/image_select_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/buttonChooseImage"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
                 android:text="이미지 선택"
-                android:textColor="@color/black"
-                android:background="@color/bg_green"/>
+                android:textColor="@color/white"
+                android:background="#206A5D"
+                android:textSize="16sp"
+                android:layout_below="@id/editTextMessage"/>
 
             <ImageView
-                android:id="@+id/selected_image_view"
-                android:layout_width="match_parent"
-                android:layout_height="46dp" />
+                android:id="@+id/imageViewSelectedImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
 
-<!--            <RadioGroup-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:gravity="center">-->
-<!--                <RadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="15dp"-->
-<!--                    android:text="공개"/>-->
+            <!--            <RadioGroup-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:gravity="center">-->
+            <!--                <RadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="15dp"-->
+            <!--                    android:text="공개"/>-->
 
-<!--                <RadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="10dp"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="15dp"-->
-<!--                    android:text="비공개"/>-->
-<!--            </RadioGroup>-->
+            <!--                <RadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="10dp"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="15dp"-->
+            <!--                    android:text="비공개"/>-->
+            <!--            </RadioGroup>-->
 
             <Button
-                android:id="@+id/reg_button"
+                android:id="@+id/buttonSend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="등록하기"
-                android:textColor="@color/black"
-                android:background="@color/bg_green"/>
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text="레시피 등록하기"
+                android:textColor="@color/white"
+                android:background="#206A5D"/>
         </LinearLayout>
     </ScrollView>
 
